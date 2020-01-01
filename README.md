@@ -18,10 +18,7 @@ VietTrie.has_word(đàn bà) --> True
 VietTrie.has_word(đàn bà) --> True
 VietTrie.has_word(english) --> False
 VietTrie.has_word(việt nam) --> True
-Extract words from this sentence:
-thiên nhiên việt nam rất là hùng vĩ -> ['thiên nhiên', 'việt nam', 'rất', 'là', 'hùng vĩ']
-Extract words from this sentence:
-mày lúc nào cũng í a í ới nhức hết cả đầu -> ['mày', 'lúc', 'nào', 'cũng', 'í a í ới', 'nhức', 'hết cả', 'đầu']
-Extract words from this sentence:
-chạy chậm ì à ì ạch -> ['chạy', 'chậm', 'ì à ì ạch']
+Extract words from this sentence: thiên nhiên việt nam rất là hùng vĩ -> ['thiên nhiên', 'việt nam', 'rất', 'là', 'hùng vĩ']
+Extract words from this sentence: mày lúc nào cũng í a í ới nhức hết cả đầu -> ['mày', 'lúc', 'nào', 'cũng', 'í a í ới', 'nhức', 'hết cả', 'đầu']
+Extract words from this sentence: chạy chậm ì à ì ạch -> ['chạy', 'chậm', 'ì à ì ạch']
 ```
