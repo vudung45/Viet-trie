@@ -33,6 +33,7 @@ class VietTrie:
       depth = max(1, self.trail_depth(word_gen))
       words.append(" ".join(tokens[i:i+depth]))
       i += depth
+
     return words
 
 
@@ -43,6 +44,7 @@ class VietTrie:
       if token not in tmp.next:
         return False
       tmp = tmp.next[token]
+      
     return tmp.is_word
 
 
@@ -53,7 +55,6 @@ class VietTrie:
       if token not in tmp.next:
         tmp.next[token] = self.__class__() # a hack to make VietTrie singleton :)
       tmp = tmp.next[token]
-
     tmp.is_word = True
 
 words = []
