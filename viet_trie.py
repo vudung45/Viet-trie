@@ -9,8 +9,7 @@ class VietTrie:
 
 
   # this function is created for efficiency purposes
-  # Used for efficient sliding window approach to extract all words
-  # from a list of tokens from LEFT -> RIGHT
+  # Used for efficient sliding window approach to extract all words in a sentence
   def trail_depth(self, word_gen: Generator[str, None, None]) -> int:
     depth = 0
     max_depth = depth
