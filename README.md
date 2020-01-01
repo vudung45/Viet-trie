@@ -1,5 +1,5 @@
 # Viet-trie
-	Scrape all vietnamese words from VDict.com and construct a trie datastructure to store all of those words
+Scrape all vietnamese words from VDict.com and construct a trie datastructure to store all of those words
 
 # Test:
 ```python
