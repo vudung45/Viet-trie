@@ -9,7 +9,7 @@ class VietTrie:
 
 
   # this function is created for efficiency purposes
-  # Used for efficient sliding window approach to attract all words
+  # Used for efficient sliding window approach to extract all words
   # from a list of tokens from LEFT -> RIGHT
   def trail_depth(self, word_gen: Generator[str, None, None]) -> int:
     depth = 0
@@ -44,7 +44,7 @@ class VietTrie:
       if token not in tmp.next:
         return False
       tmp = tmp.next[token]
-      
+
     return tmp.is_word
 
 
