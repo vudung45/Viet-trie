@@ -16,8 +16,8 @@ for page in range(1, 295):  # 294 pages
     soup = BeautifulSoup(res.text, "html.parser")
     result_list_node = soup.findAll("div", class_="result-list")[0]
     for node in result_list_node.findAll("a"):
-        print(node.contents[0].lower())
-        words.add(node.contents[0].lower())
+        print(node.contents[0])
+        words.add(node.contents[0])
 
 
 with io.open('words.txt', 'w', encoding="utf8") as outfile:
