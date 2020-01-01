@@ -72,6 +72,8 @@ if __name__ == "__main__":
   print(f"VietTrie.has_word(english) --> {VietTrie.has_word('english')}")
   print(f"VietTrie.has_word(việt nam) --> {VietTrie.has_word('việt nam')}")
   print(f"Extract words from this sentence: thiên nhiên việt nam rất là hùng vĩ -> {VietTrie.extract_words('thiên nhiên việt nam rất là hùng vĩ')}")
+  print(f"Extract words from this sentence: mày lúc nào cũng í a í ới nhức hết cả đầu -> {VietTrie.extract_words('mày lúc nào cũng í a í ới nhức hết cả đầu')}")
+  print(f"Extract words from this sentence: chạy chậm ì à ì ạch -> {VietTrie.extract_words('chạy chậm ì à ì ạch')}")
 
 
 
