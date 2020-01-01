@@ -1,6 +1,7 @@
 from typing import List, Iterable, Generator
 import itertools
-
+import os.path
+import re
 
 class VietTrie:
   def __init__(self) -> None:
@@ -58,7 +59,7 @@ class VietTrie:
     tmp.is_word = True
 
 words = []
-with open("words.txt", "r") as f:
+with open(os.path.join(os.path.dirname(__file__), "words.txt"), "r") as f:
   words = f.read().split("\n")
 
 # a hack to make VietTrie singleton :)
