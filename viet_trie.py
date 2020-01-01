@@ -27,8 +27,9 @@ class VietTrie:
     tokens = sentence.lower().split(" ")
     words = []
     i = 0
+    # construct a sliding window iterator every iteration
     while i < len(tokens):
-      word_gen = itertools.islice(tokens , i, len(tokens))
+      word_gen = itertools.islice(tokens , i, len(tokens)) # sliding window iterator
       depth = max(1, self.trail_depth(word_gen))
       words.append(" ".join(tokens[i:i+depth]))
       i += depth
@@ -70,7 +71,7 @@ for word in words:
 
 if __name__ == "__main__":
   print(f"VietTrie.has_word(đàn bà) --> {VietTrie.has_word('đàn bà')}")
-  print(f"VietTrie.has_word(đàn bà) --> {VietTrie.has_word('đàn ông')}")
+  print(f"VietTrie.has_word(đàn ông) --> {VietTrie.has_word('đàn ông')}")
   print(f"VietTrie.has_word(english) --> {VietTrie.has_word('english')}")
   print(f"VietTrie.has_word(việt nam) --> {VietTrie.has_word('việt nam')}")
   print(f"Extract words from this sentence: thiên nhiên việt nam rất là hùng vĩ -> {VietTrie.extract_words('thiên nhiên việt nam rất là hùng vĩ')}")
