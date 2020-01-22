@@ -3,26 +3,6 @@ import itertools
 import os.path
 import re
 
-def decapitalize(word):
-    """
-        won't decapitalize the first character if the word is in all CAPS
-    """
-    return word[:1].lower() + word[1:] if not word.isupper() else word
-
-def simplify(sentence):
-    """
-        remove spaces in the front and decapitalize the first word
-    """
-    tokens = sentence.split(" ")
-    i = 0
-
-    while i < len(tokens) and tokens[i] == "":
-        i += 1
-    tokens = tokens[i:]
-    if not tokens:
-        return ""
-    return " ".join([decapitalize(tokens[0])] + tokens[1:])
-
 
 class VietTrie:
   def __init__(self) -> None:
@@ -46,7 +26,7 @@ class VietTrie:
     return max_depth
 
   def extract_words(self, original: str) -> List[str]:
-    sentences = [simplify(sentence) for sentence in re.split('[!.?,]+', original)]
+    sentences = [sentence for sentence in re.split('[!.?,]+', original)]
     words = []
     for sentence in sentences:
       tokens = [token for token in sentence.split(" ") if token != ""]
